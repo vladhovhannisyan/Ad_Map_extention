@@ -1,0 +1,24 @@
+:root {  
+  scroll-padding-top: 80px;
+  scroll-behavior: smooth !important;
+}
+
+#RegenPlugin {
+  display: none;
+  height: 100%;
+  width: 300px;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  z-index: 10000;
+  border: 1px solid #eee;
+  padding: 15px;
+}
+
+.tree-leaf-content {
+  margin-top: 12px !important;
+  }
+
+.tree-child-leaves{
+  margin-left: 20px !important;
+}

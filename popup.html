@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+
+  <style>
+    .mode-type{
+      display: inline-block;
+    }
+    .bott-btn {
+      width: 64px; 
+      display: inline-block;
+    }
+  </style>
+
+</head>
+
+<body style="width: 300px">
+
+  <div class="container my-2">
+    <!-- value="ventrismedical.com"  -->
+    <input type="text"  class="form-control" value="ventrismedical.com" placeholder="Enter Sitemap URL">
+
+    <div class="form-check mt-2">
+      <div class='mode-type'>
+        <input class="form-check-input" type="radio" name="mode" value="crawl" id="crawl" checked>
+        <label class="form-check-label" for="crawl">
+          Crawl
+        </label>  
+      </div>
+      <div class='mode-type' style="margin-left: 66px;">
+        <input class="form-check-input" type="radio" name="mode" value="live" id="live">
+        <label class="form-check-label" for="live">
+          Live
+        </label>  
+      </div>
+      <div class='mode-type' style="margin-left: 63px;">
+        <input class="form-check-input" type="radio" name="mode" value="local" id="local">
+        <label class="form-check-label" for="local">
+          Local
+        </label>  
+      </div>
+      
+    </div>
+
+    <button class="btn btn-primary btn-block mt-2">Start Auto Load</button>
+
+    <button class="btn btn-primary btn-block mt-2 bott-btn">Start</button>
+    <button class="btn btn-primary btn-block mt-2 bott-btn" style="padding-left: 8px;">Pause</button>
+    <button class="btn btn-primary btn-block mt-2 bott-btn">Stop</button>
+    <button class="btn btn-primary btn-block mt-2 bott-btn">Exit</button>
+
+  </div>
+
+  <script src="bootstrap/js/jquery.js"></script>  
+  <script src="bootstrap/js/bootstrap.min.js"></script>  
+  <script src="js/popup.js"></script>
+</body>
+
+</html>

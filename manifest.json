@@ -1,0 +1,47 @@
+{
+  "manifest_version": 2,
+  "name": "__MSG_application_title__",
+  "short_name": "Regen POC",
+  "description": "__MSG_application_description__",
+  "default_locale": "en",
+  "permissions": ["tabs","contextMenus","notifications","alarms","storage","activeTab", "unlimitedStorage"],
+  "browser_action": {
+    "default_title": "__MSG_application_title__",
+    "default_popup": "popup.html"
+  },
+  "icons": {
+    "16": "Plugin16.png",
+    "96": "Plugin96.png"
+  },
+  "background": {
+    "scripts": [
+      "libs/jquery/jquery-3.3.1.js",
+      "libs/xml2json/xml2json.min.js", 
+      "js/background.js", 
+      "js/extWordHighlighter_skipSettings.js",
+      "js/extWordHighlighter.js"
+    ]
+  },
+  "version": "0.1",
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": [
+        "js/common.js",
+        "libs/jquery/jquery-3.3.1.js",
+        "js/highlightEngine.js",
+        "js/tabWordHighlighter.js", 
+        "js/treeview.js", 
+        "js/panel.js", 
+        "js/finder.js"
+      ],
+      "css" : ["highlightThis.css", "css/styles.css", "css/panel.css"],
+      "all_frames": false,
+      "run_at": "document_start",
+      "match_about_blank": true
+    }
+  ],
+  "web_accessible_resources": [
+    "panel.html"
+]
+}
